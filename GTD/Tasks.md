@@ -1,0 +1,4 @@
+* [x] look up what equipment and ingredients you need [project:: [[Learn how to make sushi]]] - [context:: web] - [timescale:: next] [completion:: 2024-03-21]
+* [x] buy the roll mat and a rice paddle online [project:: [[Learn how to make sushi]]] - [context:: web] - [timescale:: [[2024-03-22]]] [completion:: 2024-03-30]
+* [x] visit the Asian grocery store to see if they have any good sushi vinegar [project:: [[Learn how to make sushi]]] - [context:: web] - [timescale:: next] [completion:: 2024-04-27]
+* [x] plan a simple meal, when you've read your cookbook again [project:: [[Learn how to make sushi]]] - [context:: web] - [timescale:: waiting] [completion:: 2024-04-27]

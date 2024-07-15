@@ -1,0 +1,4 @@
+- [x] new belt hole for brown belt 
+- [x] refill washing up liquid piles of clothes etc on the bedroom 
+- [ ] hose and general tidy up the back 
+- [ ] smudge in the bedroom 
