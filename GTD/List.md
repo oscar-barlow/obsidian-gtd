@@ -1,7 +1,7 @@
 # Goals
 ```dataviewjs
 const goals = dv.pages('"GTD/Goals"')
-	.where(g => g.activationDate != null && p.completionDate == null)
+	.where(g => g.activationDate != null && g.completionDate == null)
 	.sort(g => g.activationDate, 'asc');
 
 dv.table(["#", "Goal", "Activation Date"], goals.map((goal, index) => [index + 1, goal.file.link, goal.activationDate.toISODate()]));
