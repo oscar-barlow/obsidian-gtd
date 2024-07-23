@@ -51,12 +51,12 @@ const goals = dv.pages('"GTD/Goals"')
 const activeProjectLinks = dv.pages('"GTD/Projects"')
     .where(p => p.activationDate != null && p.completionDate == null && p.activationDate <= new Date())
     .map(project => project.file.link.path).array();
-debugger;
 
-const goalWithoutArchiveProjects = goals.mutate(g => g.file.inlinks = g.file.inlinks.filter(inlink => activeProjectLinks.includes(inlink.path)));
+const goalsWithoutArchiveProjects = goals.mutate(g => g.file.inlinks = g.file.inlinks.filter(inlink => activeProjectLinks.includes(inlink.path)))
+	.sort(gWAP => gWAP.file.inlinks.length, "desc");
 
-const goalNames = goalWithoutArchiveProjects.map(g => g.file.name).array();
-const goalCounts = goalWithoutArchiveProjects.map(g => g.file.inlinks.length).array();
+const goalNames = goalsWithoutArchiveProjects.map(g => g.file.name).array();
+const goalCounts = goalsWithoutArchiveProjects.map(g => g.file.inlinks.length).array();
 
 const chartData = {
     type: 'pie',
@@ -134,7 +134,6 @@ const activatedProjects = dv.pages('"GTD/Projects"').where(p =>
 const allActiveProjectWeeks = activatedProjects.flatMap(ap => ap.activeWeeks);
 
 const deduplicated = new Set(allActiveProjectWeeks.array());
-
 const sorted = Array.from(deduplicated.values()).sort();
 const startDate = sorted[0];
 const endDate = sorted.slice(-1)[0];
@@ -171,6 +170,7 @@ const chartData = {
 
 window.renderChart(chartData, this.container);
 ```
+
 
 ## Length
 The chart below groups projects by their duration in days, and assigns them to buckets of 10-day increments. For any new project, this helps set an expectation about how long this project should last. 
@@ -258,6 +258,7 @@ const chartData = {
 
 window.renderChart(chartData, this.container);
 ```
+
 
 # Tasks
 ## Completed by Week
