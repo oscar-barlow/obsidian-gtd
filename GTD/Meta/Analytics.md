@@ -228,7 +228,7 @@ groupedActivatedProjectBuckets.forEach(gb => {
 const chartData = {
     type: 'bar',
     data: {
-        labels: Object.keys(completedProjectData),
+        labels: Object.keys(activatedProjectData),
         datasets: [{
                 label: 'Completed Project Durations',
                 data: Object.values(completedProjectData),
