@@ -1,3 +1,9 @@
+## Inbox
+```dataviewjs
+const inboxItems = dv.pages('"GTD/Inbox"').file.tasks;
+const unprocessed = inboxItems.where(t => !t.completed);
+dv.paragraph(`You have **${unprocessed.length}** unprocessed items in your inbox`);
+```
 ## Tickler
 ```dataview
 TASK
@@ -7,11 +13,11 @@ AND !completed
 GROUP BY timescale
 ```
 
-## Overdue
+## Due & Overdue
 ```dataview
 TASK
 FROM "GTD/Tasks"
-WHERE deadline < date(today)
+WHERE deadline <= date(today)
 AND deadline != null
 AND !completed
 GROUP BY timescale
