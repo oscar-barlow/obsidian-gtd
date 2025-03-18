@@ -14,8 +14,17 @@ Download this project and open this folder as a vault in Obsidian.
  You will need several plugins to make this work:
 
 ### core
- * Templates - ensure this is enabled and configured to look for templates in the `Templates` folder you copied above.
+Ensure the following are enabled:
+ * Templates - configured to look for templates in the `Templates` folder you copied above.
+
+ #### optional
+ * Sync - personal experince shows that Obsidian's sync plugin is more convenient reliable than self-managed alternatives
 
 ### community
-* [dataview](https://github.com/blacksmithgu/obsidian-dataview) - ensure this is enabled, and that the 'Automated completion tracking' setting under 'Tasks' is toggled on 
-* [charts](https://github.com/phibr0/obsidian-charts) - ensure this is enabled
+Ensure the following are installed and enabled:
+* [charts](https://github.com/phibr0/obsidian-charts) 
+* [dataview](https://github.com/blacksmithgu/obsidian-dataview) - ensure that the 'Automated completion tracking' setting under 'Tasks' is toggled on 
+* [natural language dates](https://github.com/argenos/nldates-obsidian) - toggle off the 'Add dates as link?' setting
+
+#### optional
+* [annotator](https://github.com/elias-sundqvist/obsidian-annotator) - annotate pdfs and epubs in obsidian
